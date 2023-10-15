@@ -1,5 +1,4 @@
 import flask
-import json
 import functions_framework
 
 
@@ -7,7 +6,7 @@ import functions_framework
 def actnet_event(r: flask.request) -> flask.typing.ResponseReturnValue:
   request_json = r.get_json()
 
-  #the things we will need to post
+  # the things we will need to post
   event_name = request_json['title']
   event_venue = request_json['location']['venue']
   event_zip = request_json['location']['']
@@ -18,5 +17,5 @@ def actnet_event(r: flask.request) -> flask.typing.ResponseReturnValue:
 
 
 
-  #return an http response
+  # return an http response
   return 'OK'
